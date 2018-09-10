@@ -1,8 +1,10 @@
 #include<stdio.h>
 #include<fcntl.h>
 #include<sys/stat.h>
+#include<sys/types.h>
 #include<mqueue.h>
-#include<fcntl.h>
+#include<unistd.h>
+
 
 struct mq_attr cdacmq_attr;
 mqd_t cdacmqd;
