@@ -5,8 +5,8 @@ int main(int argc,char const*argv[])
 {
  pid_t id;
 printf("befor fork %d\n",getpid());
-id=fork();
-if(0==id)
+//id=fork();
+if(fork())
 {
 sleep(8);
 printf("child process is %d \t%d\t %d\n",getpid(),getppid(),id);
