@@ -7,7 +7,7 @@ float real;
 float img;
 public:
 void get_complex()
-{
+{cout<<"enter the real and img number\n"; 
 cin>>real>>img;
 }
 void print_complex()
@@ -15,11 +15,11 @@ void print_complex()
 cout<<"real="<<real<<endl;
 cout<<"img="<<img<<endl;
 }
-void add_complex(complex c1,complex c2)
+void add_complex(complex   *c1,complex *c2)
 {
 
-real=c1.real+c2.real;
-img=c1.img+c2.img;
+real=c1->real+c2->real;
+img=c1->img+c2->img;
 
 }
 
