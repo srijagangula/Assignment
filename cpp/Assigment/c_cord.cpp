@@ -2,38 +2,55 @@
 #include<cmath>
 using namespace std;
 class point
-	{
+{
 
-	float x1,x2,y1,y2;
+int a,b;
 
 public:
-	void get_point()
+	point()
 	{
-	cout<<"enter point values"<<endl;
-	 cin>>x1>>x2>>y1>>y2;
-
+		a=0;
+		b=0;
 	}
-	/*void display()
+	point(int x,int y)
 	{
-	
-	cout<<"dist ="<<d<<endl;
-	 
-	}*/
-friend void get_distance();
+		a=x;
+		b=y;
+	}
+	point(int x)
+	{
+		a=x;
+		b=x;
+	}
+	point(const point &p)
+	{
+		a=p.a;
+		b=p.b;
+	}
+	void display()
+	{
+	cout<<a<<b<<endl;	
+	}
+friend float get_distance(point p1,point p2);
+
 };
-void get_distance()
+float get_distance(point p1,point p2)
 {
-	float sq1,sq2,d;
-	
-	d=sqrt(pow((x2-x1),2)+pow((y2-y1),2));
-	cout<<"dist ="<<d<<endl;
+	int x=p1.a-p2.a;
+	int y=p1.b-p2.b;
+	float m=sqrt((pow(x,2))+(pow(y,2)));
+	return m;
 }
 
-main()
+int main()
 {
-	point p;
-	p.get_point();
-	get_distance();
+	point p1,p2(6,4),p3(p2),p5(4,5);
+	p1.display();
+	p2.display();
+	p3.display();
+	float res=get_distance(p2,p5);
+	cout<<"distance is :"<<res<<endl;
+	return 0;
 	
 }
 

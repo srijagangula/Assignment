@@ -1,5 +1,5 @@
 #include<iostream>
-#
+
 using namespace std;
 
 class complex
@@ -7,8 +7,7 @@ class complex
 
 	float real;
 	float img;
-	
-
+public:
 	friend istream& operator>>(istream &,complex);
 	friend ostream& operator<<(ostream &,complex);
 
@@ -18,7 +17,6 @@ class complex
 		temp.real=real+c.real;
 		temp.img=img+c.img;
 		return(temp);
-
 	}
 	
 };

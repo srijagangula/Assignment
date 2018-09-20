@@ -18,7 +18,7 @@ public :
 		sname=new char[strlen(s)+1];
 		strcpy(sname,s);
 		len=strlen(s);
-	}
+	} 
 	string1(const string1 &s)
 	{
 		sname=new char[s.len+1];
@@ -27,8 +27,10 @@ public :
 	}
 	~string1()
 	{
+		cout<<"In destructor"<<endl;
 		if(sname!=NULL)	
 		delete sname;
+	cout<<"end destructor"<<endl;
 	}
 
 	void Display()
